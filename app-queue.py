@@ -62,7 +62,7 @@ def worker():
         finally:
             job.event.set()
             job_queue.task_done()
-            # 60-second wait after processing the job
+            # 5-second wait after processing the job
             time.sleep(5)
 
 threading.Thread(target=worker, daemon=True).start()
